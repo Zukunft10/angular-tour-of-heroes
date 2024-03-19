@@ -1,23 +1,17 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+export interface Hero {
+  id: number;
+  name: string;
+}
+import { Hero } from './hero';
 
-import { HeroesComponent } from './heroes.component';
-
-describe('HeroesComponent', () => {
-  let component: HeroesComponent;
-  let fixture: ComponentFixture<HeroesComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [HeroesComponent]
-    })
-    .compileComponents();
-    
-    fixture = TestBed.createComponent(HeroesComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+export const HEROES: Hero[] = [
+  { id: 12, name: 'Dr. Nice' },
+  { id: 13, name: 'Bombasto' },
+  { id: 14, name: 'Celeritas' },
+  { id: 15, name: 'Magneta' },
+  { id: 16, name: 'RubberMan' },
+  { id: 17, name: 'Dynama' },
+  { id: 18, name: 'Dr. IQ' },
+  { id: 19, name: 'Magma' },
+  { id: 20, name: 'Tornado' }
+];
